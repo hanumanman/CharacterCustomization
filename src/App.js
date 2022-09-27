@@ -171,7 +171,7 @@ export default function App() {
 let selectedItems = [];
 
 let earrings = [];
-for (var i = 1; i <= 32; i++) {
+for (let i = 1; i <= 32; i++) {
   earrings.push({
     index: i,
     id: `earring${i}`,
@@ -182,7 +182,7 @@ for (var i = 1; i <= 32; i++) {
 }
 
 let glasses = [];
-for (var i = 1; i <= 17; i++) {
+for (let i = 1; i <= 17; i++) {
   glasses.push({
     index: i,
     id: `glass${i}`,
@@ -193,7 +193,7 @@ for (var i = 1; i <= 17; i++) {
 }
 
 let hats = [];
-for (var i = 1; i <= 17; i++) {
+for (let i = 1; i <= 17; i++) {
   hats.push({
     index: i,
     id: `hat${i}`,
@@ -204,7 +204,7 @@ for (var i = 1; i <= 17; i++) {
 }
 
 let neckwear = [];
-for (var i = 1; i <= 18; i++) {
+for (let i = 1; i <= 18; i++) {
   neckwear.push({
     index: i,
     id: `neckwear${i}`,
@@ -215,7 +215,7 @@ for (var i = 1; i <= 18; i++) {
 }
 
 let body = [];
-for (var i = 1; i <= 17; i++) {
+for (let i = 1; i <= 17; i++) {
   body.push({
     index: i,
     id: `body${i}`,
@@ -226,7 +226,7 @@ for (var i = 1; i <= 17; i++) {
 }
 
 let layer1 = [];
-for (var i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
   layer1.push({
     index: i,
     id: `layer1-item${i}`,
@@ -237,7 +237,7 @@ for (var i = 1; i <= 5; i++) {
 }
 
 let layer2 = [];
-for (var i = 1; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
   layer2.push({
     index: i,
     id: `layer2-item${i}`,
@@ -248,7 +248,7 @@ for (var i = 1; i <= 5; i++) {
 }
 
 let layer3 = [];
-for (var i = 1; i <= 9; i++) {
+for (let i = 1; i <= 9; i++) {
   layer3.push({
     index: i,
     id: `layer3-item${i}`,
@@ -259,7 +259,7 @@ for (var i = 1; i <= 9; i++) {
 }
 
 let eyebrows = [];
-for (var i = 1; i <= 15; i++) {
+for (let i = 1; i <= 15; i++) {
   eyebrows.push({
     index: i,
     id: `eyebrows${i}`,
@@ -270,7 +270,7 @@ for (var i = 1; i <= 15; i++) {
 }
 
 let eyes = [];
-for (var i = 1; i <= 24; i++) {
+for (let i = 1; i <= 24; i++) {
   eyes.push({
     index: i,
     id: `eye${i}`,
@@ -281,7 +281,7 @@ for (var i = 1; i <= 24; i++) {
 }
 
 let facialHair = [];
-for (var i = 1; i <= 17; i++) {
+for (let i = 1; i <= 17; i++) {
   facialHair.push({
     index: i,
     id: `facialHair${i}`,
@@ -292,7 +292,7 @@ for (var i = 1; i <= 17; i++) {
 }
 
 let hair = [];
-for (var i = 1; i <= 73; i++) {
+for (let i = 1; i <= 73; i++) {
   hair.push({
     index: i,
     id: `hair${i}`,
@@ -303,7 +303,7 @@ for (var i = 1; i <= 73; i++) {
 }
 
 let mouths = [];
-for (var i = 1; i <= 24; i++) {
+for (let i = 1; i <= 24; i++) {
   mouths.push({
     index: i,
     id: `mouth${i}`,
@@ -314,7 +314,7 @@ for (var i = 1; i <= 24; i++) {
 }
 
 let noses = [];
-for (var i = 1; i <= 1; i++) {
+for (let i = 1; i <= 1; i++) {
   noses.push({
     index: i,
     id: `nose${i}`,
