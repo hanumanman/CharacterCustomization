@@ -1,0 +1,63 @@
+#charFrame li{
+    list-style: none;
+}
+
+#charFrame .bodypart{
+    z-index: 1;
+}
+
+#charFrame .layer1part {
+    z-index: 2;
+}
+
+#charFrame .layer2part {
+    z-index: 3;
+}
+
+#charFrame .layer3part {
+    z-index: 4;
+}
+
+#charFrame .mouthspart, .nosespart, .eyespart, .eyebrowspart, .facialHairpart, .hairpart {
+    z-index: 5;
+}
+
+#charFrame .earringspart, .glassespart, .hatspart, .neckwearpart {
+    z-index: 6;
+}
+
+#charPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid green;
+    background-color: yellowgreen;
+    border-radius: 15px;
+
+    position: sticky;
+    width: 50vw;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    top: 10px;
+}
+
+#charPreview button {
+    position: absolute;
+    bottom: -50px;
+    font-size: 1.5rem;
+    background-color: tomato;
+    cursor: pointer;
+    border: solid forestgreen 4px;
+    border-radius: 5px;
+}
+
+#charFrame {
+    top: 0;
+}
+
+#charFrame img {
+    max-width: 90%;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+}
