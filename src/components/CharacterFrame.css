@@ -6,19 +6,19 @@
     z-index: 1;
 }
 
-#charFrame .layer1part {
+#charFrame .layer_1part {
     z-index: 2;
 }
 
-#charFrame .layer2part {
+#charFrame .layer_2part {
     z-index: 3;
 }
 
-#charFrame .layer3part {
+#charFrame .layer_3part {
     z-index: 4;
 }
 
-#charFrame .mouthspart, .nosespart, .eyespart, .eyebrowspart, .facialHairpart, .hairpart {
+#charFrame .mouthspart, .nosespart, .eyespart, .eyebrowspart, .facial_hairpart, .hairpart {
     z-index: 5;
 }
 
