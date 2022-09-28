@@ -4,8 +4,9 @@ import "./Header.css";
 function Header() {
   return (
     <div className="headerContainer">
-      <h1>CUSTOMIZE</h1>
-      <h1>YOUR CHARACTER!</h1>
+      <div className="appHeader">CUSTOMIZE</div>
+      <div className="appHeader">YOUR</div>
+      <div className="appHeader"> CHARACTER!</div>
     </div>
   );
 }

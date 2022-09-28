@@ -1,19 +1,20 @@
+.headerContainer {
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.headerContainer{
-    margin-bottom: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #F46036;
-    border: 5px solid #114B5F;
-    border-radius: 20px;
-    width: 60vw;
-    max-width: 600px;
+  background-color: #f46036;
+  border: 5px solid #114b5f;
+  border-radius: 20px;
+  width: 60vw;
+  max-width: 600px;
 }
 
-.headerContainer h1 {
-        margin: 5px;
-        font-family: 'Noto Sans Mono', monospace;
-        color: #114B5F;
-    }
+.headerContainer .appHeader {
+  margin: 5px;
+  font-family: "Noto Sans Mono", monospace;
+  color: #114b5f;
+  font-weight: bolder;
+  font-size: xx-large;
+}
