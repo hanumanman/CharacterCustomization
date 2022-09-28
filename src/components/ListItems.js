@@ -3,19 +3,33 @@ import Items from "./Items";
 import "./ListItems.css";
 
 function ListItems({ list, listName, setList, modifySelectedArray }, ref) {
-  useImperativeHandle(
-    ref,
-    () => ({
-      randomize() {
-        let randomIndex = Math.floor(Math.random() * list.length);
-        console.log(randomIndex);
-        let randomItemId = list[randomIndex].id;
-        console.log(randomItemId);
-        setSelectedForRandomize(randomItemId);
-      },
-    }),
-    []
-  );
+  useImperativeHandle(ref, () => ({
+    randomize() {
+      const setSelectedForRandomize = (itemId) => {
+        listName.map((item) => {
+          if (item.id === itemId) {
+            console.log(`found object w id`);
+            if (item.status === "") {
+              item.status = "selected";
+              modifySelectedArray(item);
+            }
+            return { ...item };
+          } else {
+            item.status = ""; //keep only 1 item selected at a time
+
+            return { ...item };
+          }
+        });
+        setList([...listName]);
+      };
+
+      let randomIndex = Math.floor(Math.random() * list.length);
+      console.log(randomIndex);
+      let randomItemId = list[randomIndex].id;
+      console.log(randomItemId);
+      setSelectedForRandomize(randomItemId);
+    },
+  }));
 
   const setSelected = (itemId) => {
     listName.map((item) => {
@@ -26,24 +40,6 @@ function ListItems({ list, listName, setList, modifySelectedArray }, ref) {
           modifySelectedArray(item);
         } else {
           item.status = "";
-          modifySelectedArray(item);
-        }
-        return { ...item };
-      } else {
-        item.status = ""; //keep only 1 item selected at a time
-
-        return { ...item };
-      }
-    });
-    setList([...listName]);
-  };
-
-  const setSelectedForRandomize = (itemId) => {
-    listName.map((item) => {
-      if (item.id === itemId) {
-        console.log(`found object w id`);
-        if (item.status === "") {
-          item.status = "selected";
           modifySelectedArray(item);
         }
         return { ...item };
