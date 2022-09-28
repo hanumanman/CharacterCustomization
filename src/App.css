@@ -15,7 +15,7 @@
 
 .randomizeBtn {
   position: sticky;
-  top: 474px;
+  top: 50vh;
   font-size: 1.5rem;
   background-color: tomato;
   cursor: pointer;
