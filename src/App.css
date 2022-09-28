@@ -4,22 +4,34 @@
   box-sizing: border-box;
 }
 
-.container{
-  background-color: #9acd32;
+.container {
+  background-color: #def2c8;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10vh;
 }
 
-
 .randomizeBtn {
-  position: sticky;
-  top: 50vh;
+  margin-top: 5px;
   font-size: 1.5rem;
-  background-color: tomato;
+
   cursor: pointer;
-  border: solid forestgreen 4px;
+
   border-radius: 5px;
+  background-color: #e9afa3;
+  border: 5px solid #3a405a;
+  font-family: "Noto Sans Mono", monospace;
+  color: #114b5f;
 }
 
+#box {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #def2c8;
+  width: 100vw;
+  padding: 10px 0px 10px 0px;
+}

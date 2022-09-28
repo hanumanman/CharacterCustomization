@@ -94,29 +94,31 @@ export default function App() {
       <div className="container">
         <Header />
 
-        <CharacterFrame charPreviewList={charPreviewList} />
+        <div id="box">
+          <CharacterFrame charPreviewList={charPreviewList} />
 
-        <button
-          className="randomizeBtn"
-          onClick={() => {
-            earringsRef.current.randomize();
-            glassesRef.current.randomize();
-            hatsRef.current.randomize();
-            neckwearRef.current.randomize();
-            bodyRef.current.randomize();
-            layer1Ref.current.randomize();
-            layer2Ref.current.randomize();
-            layer3Ref.current.randomize();
-            eyebrowsRef.current.randomize();
-            eyesRef.current.randomize();
-            facialHairRef.current.randomize();
-            hairRef.current.randomize();
-            mouthRef.current.randomize();
-            nosesRef.current.randomize();
-          }}
-        >
-          RANDOMIZE!
-        </button>
+          <button
+            className="randomizeBtn"
+            onClick={() => {
+              earringsRef.current.randomize();
+              glassesRef.current.randomize();
+              hatsRef.current.randomize();
+              neckwearRef.current.randomize();
+              bodyRef.current.randomize();
+              layer1Ref.current.randomize();
+              layer2Ref.current.randomize();
+              layer3Ref.current.randomize();
+              eyebrowsRef.current.randomize();
+              eyesRef.current.randomize();
+              facialHairRef.current.randomize();
+              hairRef.current.randomize();
+              mouthRef.current.randomize();
+              nosesRef.current.randomize();
+            }}
+          >
+            RANDOMIZE!
+          </button>
+        </div>
 
         <ListItems
           ref={earringsRef}
