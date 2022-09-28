@@ -5,11 +5,13 @@ import PreviewItem from "./PreviewItem";
 function CharacterFrame({ charPreviewList }) {
   return (
     <>
-      <div id="charPreview">
-        <div id="charFrame">
-          {charPreviewList.map((item) => (
-            <PreviewItem key={`${item.listName}${item.index}`} item={item} />
-          ))}
+      <div id="previewCont">
+        <div id="charPreview">
+          <div id="charFrame">
+            {charPreviewList.map((item) => (
+              <PreviewItem key={`${item.listName}${item.index}`} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </>

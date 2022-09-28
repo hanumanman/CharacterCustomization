@@ -4,8 +4,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F46036;
+    border: 5px solid #114B5F;
+    border-radius: 20px;
+    width: 60vw;
+    max-width: 600px;
 }
 
 .headerContainer h1 {
         margin: 5px;
+        font-family: 'Noto Sans Mono', monospace;
+        color: #114B5F;
     }

@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import CharacterFrame from "./components/CharacterFrame";
 import ListItems from "./components/ListItems";
 import Header from "./components/Header";
@@ -17,6 +17,7 @@ export default function App() {
     noses,
     eyes,
   } = total;
+
   const { earrings, glasses, hats, neckwear } = accessories;
   const { layer_1, layer_2, layer_3 } = clothes;
   const [earringsList, setEarringsList] = useState(earrings);
@@ -35,6 +36,21 @@ export default function App() {
   const [nosesList, setNosesList] = useState(noses);
 
   const [charPreviewList, setCharPreviewList] = useState([]);
+
+  const earringsRef = useRef();
+  const glassesRef = useRef();
+  const hatsRef = useRef();
+  const neckwearRef = useRef();
+  const bodyRef = useRef();
+  const layer1Ref = useRef();
+  const layer2Ref = useRef();
+  const layer3Ref = useRef();
+  const eyebrowsRef = useRef();
+  const eyesRef = useRef();
+  const facialHairRef = useRef();
+  const hairRef = useRef();
+  const mouthRef = useRef();
+  const nosesRef = useRef();
 
   const modifySelectedArray = (item) => {
     const indexForListNameCheck = selectedItems
@@ -80,7 +96,30 @@ export default function App() {
 
         <CharacterFrame charPreviewList={charPreviewList} />
 
+        <button
+          className="randomizeBtn"
+          onClick={() => {
+            earringsRef.current.randomize();
+            glassesRef.current.randomize();
+            hatsRef.current.randomize();
+            neckwearRef.current.randomize();
+            bodyRef.current.randomize();
+            layer1Ref.current.randomize();
+            layer2Ref.current.randomize();
+            layer3Ref.current.randomize();
+            eyebrowsRef.current.randomize();
+            eyesRef.current.randomize();
+            facialHairRef.current.randomize();
+            hairRef.current.randomize();
+            mouthRef.current.randomize();
+            nosesRef.current.randomize();
+          }}
+        >
+          RANDOMIZE!
+        </button>
+
         <ListItems
+          ref={earringsRef}
           list={earringsList}
           listName={total.accessories.earrings}
           setList={setEarringsList}
@@ -88,6 +127,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={bodyRef}
           list={bodyList}
           listName={body}
           setList={setBodyList}
@@ -95,6 +135,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={eyebrowsRef}
           list={eyebrowsList}
           listName={eyebrows}
           setList={setEyebrowsList}
@@ -102,6 +143,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={eyesRef}
           list={eyesList}
           listName={eyes}
           setList={setEyesList}
@@ -109,6 +151,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={facialHairRef}
           list={facialHairList}
           listName={facial_hair}
           setList={setFacialHairList}
@@ -116,6 +159,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={hairRef}
           list={hairList}
           listName={hair}
           setList={setHairList}
@@ -123,6 +167,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={mouthRef}
           list={mouthsList}
           listName={mouths}
           setList={setMouthsList}
@@ -130,6 +175,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={nosesRef}
           list={nosesList}
           listName={noses}
           setList={setNosesList}
@@ -137,6 +183,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={glassesRef}
           list={glassesList}
           listName={glasses}
           setList={setGlassesList}
@@ -144,6 +191,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={hatsRef}
           list={hatsList}
           listName={hats}
           setList={setHatsList}
@@ -151,6 +199,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={neckwearRef}
           list={neckwearList}
           listName={neckwear}
           setList={setNeckwearList}
@@ -158,6 +207,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={layer1Ref}
           list={layer1List}
           listName={layer_1}
           setList={setLayer1List}
@@ -165,6 +215,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={layer2Ref}
           list={layer2List}
           listName={layer_2}
           setList={setLayer2List}
@@ -172,6 +223,7 @@ export default function App() {
         />
 
         <ListItems
+          ref={layer3Ref}
           list={layer3List}
           listName={layer_3}
           setList={setLayer3List}
