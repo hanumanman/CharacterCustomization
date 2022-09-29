@@ -8,7 +8,6 @@ function ListItems({ list, listName, setList, modifySelectedArray }, ref) {
       const setSelectedForRandomize = (itemId) => {
         listName.map((item) => {
           if (item.id === itemId) {
-            console.log(`found object w id`);
             if (item.status === "") {
               item.status = "selected";
               modifySelectedArray(item);
@@ -24,9 +23,7 @@ function ListItems({ list, listName, setList, modifySelectedArray }, ref) {
       };
 
       let randomIndex = Math.floor(Math.random() * list.length);
-      console.log(randomIndex);
       let randomItemId = list[randomIndex].id;
-      console.log(randomItemId);
       setSelectedForRandomize(randomItemId);
     },
   }));
@@ -34,7 +31,6 @@ function ListItems({ list, listName, setList, modifySelectedArray }, ref) {
   const setSelected = (itemId) => {
     listName.map((item) => {
       if (item.id === itemId) {
-        console.log(`found object w id`);
         if (item.status === "") {
           item.status = "selected";
           modifySelectedArray(item);
@@ -52,7 +48,6 @@ function ListItems({ list, listName, setList, modifySelectedArray }, ref) {
     setList([...listName]);
   };
 
-  console.log(list[0].listName);
   return (
     <>
       <div className="listHeader">Pick your {list[0].listName}</div>
