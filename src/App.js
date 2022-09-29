@@ -5,6 +5,11 @@ import ListItems from "./components/ListItems";
 import Header from "./components/Header";
 import { getTotalItems } from "./components/constants";
 
+let selectedItems = [];
+
+const total = getTotalItems();
+console.log(total);
+
 export default function App() {
   const {
     accessories,
@@ -61,12 +66,7 @@ export default function App() {
       .indexOf(`${item.id}`);
 
     if (indexForListNameCheck === -1) {
-      selectedItems.push({
-        index: item.index,
-        id: item.id,
-        listName: item.listName,
-        path: item.path,
-      });
+      selectedItems.push(item);
       setCharPreviewList(selectedItems);
     } else {
       if (indexForIdCheck === -1) {
@@ -235,8 +235,3 @@ export default function App() {
     </>
   );
 }
-
-let selectedItems = [];
-
-const total = getTotalItems();
-console.log(total);

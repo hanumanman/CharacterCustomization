@@ -1,58 +1,66 @@
-#charFrame li{
-    list-style: none;
+#charFrame li {
+  list-style: none;
 }
 
-#charFrame .bodypart{
-    z-index: 1;
+#charFrame .bodypart {
+  z-index: 1;
 }
 
 #charFrame .layer_1part {
-    z-index: 2;
+  z-index: 2;
 }
 
 #charFrame .layer_2part {
-    z-index: 3;
+  z-index: 3;
 }
 
 #charFrame .layer_3part {
-    z-index: 4;
+  z-index: 4;
 }
 
-#charFrame .mouthspart, .nosespart, .eyespart, .eyebrowspart, .facial_hairpart, .hairpart {
-    z-index: 5;
+#charFrame .mouthspart,
+.nosespart,
+.eyespart,
+.eyebrowspart,
+.facial_hairpart,
+.hairpart {
+  z-index: 5;
 }
 
-#charFrame .earringspart, .glassespart, .hatspart, .neckwearpart {
-    z-index: 6;
+#charFrame .earringspart,
+.glassespart,
+.hatspart,
+.neckwearpart {
+  z-index: 6;
 }
 
 #charPreview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 5px solid #3A405A;
-    background-color: #E9AFA3;
-    border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid #3a405a;
+  background-color: #e9afa3;
+  border-radius: 15px;
 
-    
-    width: 50vw;
-    max-width: 500px;
-    aspect-ratio: 1/1;
+  width: 50vw;
+  max-width: 500px;
+  max-height: 40vh;
+  aspect-ratio: 1/1;
 }
 
 #charFrame {
-    position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: #E9AFA3;
-    height: 100%;
-    width: 100%;
-    border-radius: 15px;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #e9afa3;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
 }
 
-#charFrame img{
-    max-width: 90%;
-    position: absolute;
+#charFrame img {
+  max-width: 90%;
+  position: absolute;
+  max-height: 100%;
 }
-
