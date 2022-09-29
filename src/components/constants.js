@@ -1,15 +1,15 @@
 const total = {
   accessories: {
-    glasses: 17,
-    earrings: 32,
-    hats: 28,
+    glass: 17,
+    earring: 32,
+    hat: 28,
     neckwear: 18,
   },
   body: 17,
   eyes: 17,
   hair: 73,
-  noses: 1,
-  mouths: 24,
+  nose: 1,
+  mouth: 24,
   eyebrows: 15,
   facial_hair: 17,
   clothes: {

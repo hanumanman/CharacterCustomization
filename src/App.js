@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import CharacterFrame from "./components/CharacterFrame";
 import ListItems from "./components/ListItems";
 import Header from "./components/Header";
@@ -18,16 +18,16 @@ export default function App() {
     body,
     clothes,
     hair,
-    mouths,
-    noses,
+    mouth,
+    nose,
     eyes,
   } = total;
 
-  const { earrings, glasses, hats, neckwear } = accessories;
+  const { earring, glass, hat, neckwear } = accessories;
   const { layer_1, layer_2, layer_3 } = clothes;
-  const [earringsList, setEarringsList] = useState(earrings);
-  const [glassesList, setGlassesList] = useState(glasses);
-  const [hatsList, setHatsList] = useState(hats);
+  const [earringsList, setEarringsList] = useState(earring);
+  const [glassesList, setGlassesList] = useState(glass);
+  const [hatsList, setHatsList] = useState(hat);
   const [neckwearList, setNeckwearList] = useState(neckwear);
   const [bodyList, setBodyList] = useState(body);
   const [layer1List, setLayer1List] = useState(layer_1);
@@ -37,8 +37,8 @@ export default function App() {
   const [eyesList, setEyesList] = useState(eyes);
   const [facialHairList, setFacialHairList] = useState(facial_hair);
   const [hairList, setHairList] = useState(hair);
-  const [mouthsList, setMouthsList] = useState(mouths);
-  const [nosesList, setNosesList] = useState(noses);
+  const [mouthsList, setMouthsList] = useState(mouth);
+  const [nosesList, setNosesList] = useState(nose);
 
   const [charPreviewList, setCharPreviewList] = useState([]);
 
@@ -73,12 +73,7 @@ export default function App() {
         selectedItems = selectedItems.filter(function (selectedItem) {
           return selectedItem.listName !== `${item.listName}`;
         });
-        selectedItems.push({
-          index: item.index,
-          id: item.id,
-          listName: item.listName,
-          path: item.path,
-        });
+        selectedItems.push(item);
         setCharPreviewList(selectedItems);
       } else {
         selectedItems = selectedItems.filter(function (selectedItem) {
@@ -89,6 +84,28 @@ export default function App() {
     }
   };
 
+  function randomizeAll() {
+    earringsRef.current.randomize();
+    glassesRef.current.randomize();
+    hatsRef.current.randomize();
+    neckwearRef.current.randomize();
+    bodyRef.current.randomize();
+    layer1Ref.current.randomize();
+    layer2Ref.current.randomize();
+    layer3Ref.current.randomize();
+    eyebrowsRef.current.randomize();
+    eyesRef.current.randomize();
+    facialHairRef.current.randomize();
+    hairRef.current.randomize();
+    mouthRef.current.randomize();
+    nosesRef.current.randomize();
+    console.log("randomize");
+  }
+
+  useEffect(() => {
+    randomizeAll();
+  }, []);
+
   return (
     <>
       <div className="container">
@@ -97,25 +114,7 @@ export default function App() {
         <div id="box">
           <CharacterFrame charPreviewList={charPreviewList} />
 
-          <button
-            className="randomizeBtn"
-            onClick={() => {
-              earringsRef.current.randomize();
-              glassesRef.current.randomize();
-              hatsRef.current.randomize();
-              neckwearRef.current.randomize();
-              bodyRef.current.randomize();
-              layer1Ref.current.randomize();
-              layer2Ref.current.randomize();
-              layer3Ref.current.randomize();
-              eyebrowsRef.current.randomize();
-              eyesRef.current.randomize();
-              facialHairRef.current.randomize();
-              hairRef.current.randomize();
-              mouthRef.current.randomize();
-              nosesRef.current.randomize();
-            }}
-          >
+          <button className="randomizeBtn" onClick={() => randomizeAll()}>
             RANDOMIZE!
           </button>
         </div>
@@ -123,7 +122,7 @@ export default function App() {
         <ListItems
           ref={earringsRef}
           list={earringsList}
-          listName={total.accessories.earrings}
+          listName={earring}
           setList={setEarringsList}
           modifySelectedArray={modifySelectedArray}
         />
@@ -171,7 +170,7 @@ export default function App() {
         <ListItems
           ref={mouthRef}
           list={mouthsList}
-          listName={mouths}
+          listName={mouth}
           setList={setMouthsList}
           modifySelectedArray={modifySelectedArray}
         />
@@ -179,7 +178,7 @@ export default function App() {
         <ListItems
           ref={nosesRef}
           list={nosesList}
-          listName={noses}
+          listName={nose}
           setList={setNosesList}
           modifySelectedArray={modifySelectedArray}
         />
@@ -187,7 +186,7 @@ export default function App() {
         <ListItems
           ref={glassesRef}
           list={glassesList}
-          listName={glasses}
+          listName={glass}
           setList={setGlassesList}
           modifySelectedArray={modifySelectedArray}
         />
@@ -195,7 +194,7 @@ export default function App() {
         <ListItems
           ref={hatsRef}
           list={hatsList}
-          listName={hats}
+          listName={hat}
           setList={setHatsList}
           modifySelectedArray={modifySelectedArray}
         />

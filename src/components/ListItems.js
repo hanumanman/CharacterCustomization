@@ -52,16 +52,20 @@ function ListItems({ list, listName, setList, modifySelectedArray }, ref) {
     setList([...listName]);
   };
 
+  console.log(list[0].listName);
   return (
-    <ul className="partList" ref={ref}>
-      {list.map((item) => (
-        <Items
-          key={`${listName}${item.index}`}
-          item={item}
-          setSelected={setSelected}
-        />
-      ))}
-    </ul>
+    <>
+      <div className="listHeader">Pick your {list[0].listName}</div>
+      <ul className="partList" ref={ref}>
+        {list.map((item) => (
+          <Items
+            key={`${listName}${item.index}`}
+            item={item}
+            setSelected={setSelected}
+          />
+        ))}
+      </ul>
+    </>
   );
 }
 
